@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -18,8 +19,12 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onAddProduct() {
-    this.products.push(this.productName);
+  onAddProduct(form: NgForm) {
+    console.log(form);
+    if (form.value) {
+      // this.products.push(form.controls['productName'].value);
+      this.products.push(form.value.productName);
+    }
   }
 
   onRemoveProduct(product: string) {
