@@ -1,10 +1,12 @@
-<h1>My Products</h1>
-<form (ngSubmit)="onAddProduct(f)" #f="ngForm">
-  <input type="text" ngModel name="productName" required />
-  <button type="submit" [disabled]="f.invalid">
-    Add Product
-  </button>
-</form>
+<div class="container">
+  <h3>My Products</h3>
+  <form (ngSubmit)="onAddProduct(f)" #f="ngForm">
+    <input type="text" ngModel name="productName" required />
+    <button type="submit" [disabled]="f.invalid">
+      Add Product
+    </button>
+  </form>
+</div>
 <app-product
   *ngFor="let product of products"
   [productName]="product"

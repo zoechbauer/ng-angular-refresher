@@ -6,6 +6,13 @@ import { ProductsService } from './products.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
+  styles: [
+    `
+      .container {
+        margin: 10px;
+      }
+    `,
+  ],
 })
 export class ProductsComponent implements OnInit, OnDestroy {
   productName = 'A Book';
