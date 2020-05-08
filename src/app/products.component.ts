@@ -35,10 +35,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
     }
   }
 
-  onRemoveProduct(product: string) {
-    // this.products = this.products.filter((prod) => prod !== product);
-    this.productsService.deleteProduct(product);
-  }
+  // onRemoveProduct(product: string) {
+  //   // this.products = this.products.filter((prod) => prod !== product);
+  //   // this.productsService.deleteProduct(product);
+  // }
 
   ngOnDestroy() {
     this.productsSub.unsubscribe();
