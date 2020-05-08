@@ -3,4 +3,8 @@
 <button *ngIf="!isDisabled" (click)="onAddProduct()">
   Add Product
 </button>
-<div *ngFor="let product of products">{{ product }}</div>
+<app-product
+  *ngFor="let product of products"
+  [productName]="product"
+  (productClicked)="onRemoveProduct(product)"
+></app-product>
